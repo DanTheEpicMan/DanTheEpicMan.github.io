@@ -1,35 +1,76 @@
-.header-image-overlay {
-  position: relative;
+ /* Style the navbar */
+ #navbar {
+    overflow: hidden;
+    background-color: #0f172a;
+    border-radius: 30px; 
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  } 
+
+  .rightmost {
+    float: right;
 }
 
-.header-image-overlay > .p-4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* Add a background color with some transparency if needed */
-  background-color:  rgba(0, 0, 0, 0);
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+/* Colors */
+.gradient-bottom-right {
+    background: linear-gradient(to bottom right, var(--start-color), var(--middle-color), var(--end-color));
 }
 
-.spectrum-background {
-  background:
-      linear-gradient(red, transparent),
-      linear-gradient(to top left, lime, transparent),
-      linear-gradient(to top right, blue, transparent);
-  background-blend-mode: screen;
-}
-body {
-  background-color: white;
+.start-indigo {
+    --start-color: rgb(99, 49, 134);
 }
 
-.responsive-image {
-  width: 100vw;  /* Use viewport units for dynamic sizing */
-  height: 100vh;
-  object-fit: cover;  /* Maintain aspect ratio and crop if necessary */
-  position: relative;  /* Optional for potential layering effects */
+.middle-purple {
+    --middle-color: rgb(144, 38, 99);
 }
 
-.responsive-image {
-    position: relative; /* Change to relative to keep it within flow */
-    z-index: -1; /* Set a negative z-index to put it behind the navbar */
+.end-yellow {
+    --end-color: rgb(215, 137, 102);
+}
+
+.landingpage-buttom {
+    width: 150px;
+    height: 40px;
+  }
+  
+
+  .topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
   }
