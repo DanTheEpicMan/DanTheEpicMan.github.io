@@ -1,0 +1,35 @@
+.header-image-overlay {
+  position: relative;
+}
+
+.header-image-overlay > .p-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Add a background color with some transparency if needed */
+  background-color:  rgba(0, 0, 0, 0);
+}
+
+.spectrum-background {
+  background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+}
+body {
+  background-color: white;
+}
+
+.responsive-image {
+  width: 100vw;  /* Use viewport units for dynamic sizing */
+  height: 100vh;
+  object-fit: cover;  /* Maintain aspect ratio and crop if necessary */
+  position: relative;  /* Optional for potential layering effects */
+}
+
+.responsive-image {
+    position: relative; /* Change to relative to keep it within flow */
+    z-index: -1; /* Set a negative z-index to put it behind the navbar */
+  }
