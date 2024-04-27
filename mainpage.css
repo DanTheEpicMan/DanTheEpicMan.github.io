@@ -88,4 +88,13 @@ header {
       grid-column: 1 / span 2; /* Spans across two columns on smaller screens */
     }
   }
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
   
+  .card {
+    flex: 1 0 auto;
+    margin: 3%;
+  }
