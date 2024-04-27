@@ -3,12 +3,64 @@
 <script>
   window.onload = function() {
     var cards = document.querySelectorAll('.card');
-    var firstCardHeight = cards[0].offsetHeight;
+    var firstCardHeight = 1000 - document.getElementById('cardContainer').offsetWidth;
 
-    for (var i = 1; i < cards.length; i++) {
+    for (var i = 0; i < cards.length; i++) {
         cards[i].style.height = firstCardHeight + 'px';
     }
 }
+
+window.addEventListener('resize', function() {
+  //gets coordinates of bottom right coorner of BookDiv
+  var BookDiv = document.getElementById('BookDiv');
+
+  //sets positon of BookButton to bottom right of BookDiv
+  var BookButton = document.getElementById('BookButton');
+  BookButton.style.position = 'absolute';
+  BookButton.style.bottom = '10px';
+  BookButton.style.right = '10px';
+
+  //gets coordinates of bottom right coorner of BookDiv
+  var BookDiv = document.getElementById('WedDiv');
+
+  //sets positon of BookButton to bottom right of BookDiv
+  var BookButton = document.getElementById('WebButton');
+  BookButton.style.position = 'absolute';
+  BookButton.style.bottom = '10px';
+  BookButton.style.right = '10px';
+
+  //gets coordinates of bottom right coorner of BookDiv
+  var BookDiv = document.getElementById('WikiDiv');
+
+  //sets positon of BookButton to bottom right of BookDiv
+  var BookButton = document.getElementById('WikiButton');
+  BookButton.style.position = 'absolute';
+  BookButton.style.bottom = '10px';
+  BookButton.style.right = '10px';
+
+  var cards = document.querySelectorAll('.card');
+  var height = (1500 - document.getElementById('cardContainer').offsetWidth)/2.5;
+  if (height < 180) {
+    height = 180;
+  }
+
+  if (height > 350) { //for when it goes into mobile view
+    height = height / 2.5;
+  }
+
+  var firstCardHeight = height;
+
+  console.log("Chosen:", height)
+  console.log("(1500 - width)/2.5: ", (1500 - document.getElementById('cardContainer').offsetWidth)/2.5)
+  console.log("Widtho: ", document.getElementById('cardContainer').offsetWidth)
+
+
+  for (var i = 0; i < cards.length; i++) {
+      cards[i].style.height = firstCardHeight + 'px';
+  }
+
+});
+
 </script>
 
 <html lang="en">
@@ -17,7 +69,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Daniel Denisov</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="navbar.css" rel="stylesheet">
     <link href="mainpage.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1d715d876b.js" crossorigin="anonymous"></script>  </head>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -44,7 +95,7 @@
     <div class="p-2">
       <div style="border-radius: 20px; overflow: hidden;">
         <div class="gradient-bottom-right start-indigo middle-purple end-yellow">
-          <div class="container">
+          <div class="container" id="cardContainer">
             <div class="row">
               <h1 class="ls-tight fw-bolder display-3 text-white mb-3" style="margin-top: calc(5vh + 50px);">Hey,</h1>
               <h1 class="ls-tight fw-bolder display-3 text-white mb-3">I'm Daniel Denisov.</h1>
@@ -74,32 +125,32 @@
             
             <div class="container" style="margin-top: 50px;">
               <div class="row g-6 g-lg-20 my-10">
-                <div class="col-md-4 p-2">
+                <div id="BookDiv" class="col-md-4 p-2">
                     <div class="card p-2 d-flex dlex-column" >
                       <div class="card-body">
                         <h4 class="card-title">Reading <em>Practical Reverse Engineering</em></h4>
                         <p class="card-text">By Bruce Dang, Alexandra Gazet and Elias Bachaalany</p>
-                        <div class="d-flex justify-content-end align-items-end"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
+                        <div id="BookButton"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
                         </div>
                       </div>
                     </div>
                 </div>
-                <div class="col-md-4 p-2">
+                <div id="WebDiv" class="col-md-4 p-2">
                     <div class="card p-2">
                       <div class="card-body">
                         <h4 class="card-title">This Website</h4>
                         <p class="card-text">I developed this website using basic HTML/CSS in combination with Bootstrap.</p>
-                        <div class="d-flex justify-content-end align-items-end"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
+                        <div id="WebButton"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
                         </div>
                       </div>
                     </div>
                 </div>
-                <div class="col-md-4 p-2">
+                <div id="WikiDiv" class="col-md-4 p-2">
                     <div class="card">
                       <div class="card-body">
                         <h4 class="card-title">John Doe</h4>
                         <p class="card-text">Some example text some example text. John Doe is an architect and engineer </p>
-                        <div class="d-flex justify-content-end align-items-end"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
+                        <div id="WikiButton"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
                         </div>
                       </div>
                     </div>

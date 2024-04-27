@@ -99,9 +99,3 @@ header {
     margin: 3%;
   }
 
-  @media (max-width: 30px) {
-    .card {
-        position: absolute;
-        bottom: 20px;
-    }
-}
