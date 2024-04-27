@@ -74,3 +74,18 @@ header {
     right: 16px;
     font-size: 18px;
   }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust min width as needed */
+    column-gap: 200px; /* Adjust gap between items */
+  }
+  
+  /* Media query for screens below 700px */
+  @media (max-width: 700px) {
+    .grid-item-wrap {
+      grid-column: 1 / span 2; /* Spans across two columns on smaller screens */
+    }
+  }
+  
