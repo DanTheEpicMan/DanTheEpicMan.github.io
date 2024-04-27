@@ -1,16 +1,9 @@
 <!doctype html>
 
 <script>
-  window.onload = function() {
-    var cards = document.querySelectorAll('.card');
-    var firstCardHeight = 1000 - document.getElementById('cardContainer').offsetWidth;
 
-    for (var i = 0; i < cards.length; i++) {
-        cards[i].style.height = firstCardHeight + 'px';
-    }
-}
 
-window.addEventListener('resize', function() {
+function resize() {
   //gets coordinates of bottom right coorner of BookDiv
   var BookDiv = document.getElementById('BookDiv');
 
@@ -44,6 +37,13 @@ window.addEventListener('resize', function() {
     height = 180;
   }
 
+  if(height > 350) {
+    if (height > 350) {
+      var introText = document.getElementById('intro-text');
+      introText.style.maxWidth = '40vh';
+    }
+  }
+
   if (height > 350) { //for when it goes into mobile view
     height = height / 2.5;
   }
@@ -58,7 +58,14 @@ window.addEventListener('resize', function() {
   for (var i = 0; i < cards.length; i++) {
       cards[i].style.height = firstCardHeight + 'px';
   }
+}
 
+window.onload = function() {
+    resize();
+}
+
+window.addEventListener('resize', function() {
+  resize();
 });
 
 </script>
@@ -102,7 +109,7 @@ window.addEventListener('resize', function() {
             </div>
             <div class="grid-container">
               <div class="grid-item">
-                <p class="lead text-white text-wrap" style="max-width: calc(50vh);">I'm a software developer who works with C, C++, Python in relation with AI Vision, WPIlib, and Windows Kernel Drivers.</p>
+                <p id="intro-text" class="lead text-white text-wrap" style="max-width: calc(50vh);">I'm a software developer who works with C, C++, Python in relation with AI Vision, WPIlib, and Windows Kernel Drivers.</p>
               </div>
               <div class="grid-item grid-item-wrap">
                 <a href="#projects" class="btn btn-md" style="width:180px; height:50px; border: none; border-radius: 30px; color: black; background-color: white; text-align: center; line-height: 35px; margin-right: 20px;">Explore Projects</a>
@@ -130,7 +137,7 @@ window.addEventListener('resize', function() {
                       <div class="card-body">
                         <h4 class="card-title">Reading <em>Practical Reverse Engineering</em></h4>
                         <p class="card-text">By Bruce Dang, Alexandra Gazet and Elias Bachaalany</p>
-                        <div id="BookButton"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
+                        <div id="BookButton"> <a href="https://github.com/DanTheEpicMan/obsidianNotes/tree/main/assembly/assembly" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
                         </div>
                       </div>
                     </div>
@@ -140,7 +147,7 @@ window.addEventListener('resize', function() {
                       <div class="card-body">
                         <h4 class="card-title">This Website</h4>
                         <p class="card-text">I developed this website using basic HTML/CSS in combination with Bootstrap.</p>
-                        <div id="WebButton"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
+                        <div id="WebButton"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View Repo</a>
                         </div>
                       </div>
                     </div>
