@@ -85,13 +85,13 @@ window.addEventListener('resize', function() {
   <header>
     <div class="p-3">
       <div class="container" id="navbar">
-          <a href="#home">Home</a>
+          <a href="/index.html">Home</a>
           <a href="#news">News</a>
-          <a href="#contact">Contact</a>
+          <a  data-bs-toggle="modal" data-bs-target="#myModal">Contact</a>
           <div class="d-flex justify-content-end">
-          <a href="https://www.unknowncheats.me/forum/search.php?searchid=34950843"><img src="/img/uc-logo.png" alt="UC logo" width="20" height="20"></a>
-          <a href="https://www.youtube.com/@DanTheEpicMan-"><i class="fab fa-youtube"></i></a>
-          <a href="https://github.com/DanTheEpicMan"><i class="fab fa-github"></i></a>
+            <a href="https://www.unknowncheats.me/forum/search.php?searchid=34950843"><img src="/img/uc-logo.png" alt="UC logo" width="20" height="20"></a>
+            <a href="https://www.youtube.com/@DanTheEpicMan-"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/DanTheEpicMan"><i class="fab fa-github"></i></a>
           </div>
       </div> 
     </div>
@@ -179,6 +179,27 @@ window.addEventListener('resize', function() {
     </div>
 
   </main>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: #0f172a;">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title text-white display-6">Contact Information</h4>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p class="text-white" style="margin-bottom: 3px;">Need to Contact Me?</p>
+          <p style="background: linear-gradient(to left, rgb(138, 74, 184), rgb(187, 64, 136), rgb(230, 152, 116)); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">website.contact@danieldenisov.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
 </body>
 </html>
 
