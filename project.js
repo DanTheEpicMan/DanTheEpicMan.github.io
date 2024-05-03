@@ -25,8 +25,12 @@ function OnResize() {
         document.getElementById("SmallWidthTimeline").style.display = "block";
         var timeline = document.getElementById("SmallWidthTimeline");
 
-        //try to expand on this, maybe search up make line JS
-        timeline.style.borderLeft = "1px solid white";
+        // Create a vertical line element
+        var verticalLine = document.createElement("div");
+        verticalLine.classList.add("vertical-line");
+
+        // Append the vertical line to the timeline element
+        timeline.appendChild(verticalLine);
 
 
 
