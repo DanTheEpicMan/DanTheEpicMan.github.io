@@ -29,9 +29,6 @@ function OnResize() {
         var verticalLine = document.createElement("div");
         verticalLine.classList.add("vertical-line");
 
-        // Append the vertical line to the timeline element
-        timeline.appendChild(verticalLine);
-
 
 
 
