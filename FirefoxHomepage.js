@@ -9,5 +9,7 @@ function getPercent() {
 
 function formatSearch(search) {
     baseText = "https://www.google.com/search?client=firefox-b-1-d&q=";
-    console.log(baseText + search.replace(" ", "+"));
+    finalString = baseText + search.replace(" ", "+");
+    console.log(finalString);
+    window.location.href = finalString;
 }

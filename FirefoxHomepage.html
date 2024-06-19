@@ -5,8 +5,9 @@
 </head>
 <body style="background-color: #2b2a33;">
     <div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
-        <input type="text" id="searchInput" placeholder="Enter your search term">
-        <button onclick="formatSearch(document.getElementById('searchInput').value)">Search</button>
+        <input type="text" id="searchInput" placeholder="Enter your search term" onkeydown="if (event.keyCode === 13) formatSearch(document.getElementById('searchInput').value)" autofocus>
+    </div>
+    </div>
     </div>
     <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
         <script src="FirefoxHomepage.js"></script>
