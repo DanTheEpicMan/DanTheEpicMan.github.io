@@ -4,7 +4,11 @@
     <title>New Tab</title>
 </head>
 <body style="background-color: #2b2a33;">
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
+        <input type="text" id="searchInput" placeholder="Enter your search term">
+        <button onclick="formatSearch(document.getElementById('searchInput').value)">Search</button>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
         <script src="FirefoxHomepage.js"></script>
         <p style="font-size: 24px; background: linear-gradient(to right, rgb(99, 49, 134), rgb(144, 38, 99), rgb(215, 137, 102)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Time Left: <span id="timeLeft"></span>%</p>
         <script>
