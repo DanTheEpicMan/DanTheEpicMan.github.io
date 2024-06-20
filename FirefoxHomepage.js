@@ -15,7 +15,14 @@ function formatSearch(search) {
         if (!search.startsWith("http")) {
             finalString = "https://" + finalString;
         }
+        finalString = customRedirect(finalString);
     }
     console.log(finalString);
     window.location.href = finalString;
+}
+
+function customRedirect(string) {
+    if (string == "https://github.com") {
+        return "https://github.com/DanTheEpicMan/"; //not trying to self plug or anything, just dont like github default homepage
+    }
 }
