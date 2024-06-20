@@ -10,7 +10,7 @@ function getPercent() {
 function formatSearch(search) {
     baseText = "https://www.google.com/search?client=firefox-b-1-d&q=";
     finalString = baseText + search.replace(" ", "+");
-    if (search.slice(-5).includes('.') && !search.includes(' ')) {
+    if (search.includes('.') && !search.includes(' ')) {
         finalString = search;
         if (!search.startsWith("http")) {
             finalString = "https://" + finalString;
