@@ -25,4 +25,5 @@ function customRedirect(string) {
     if (string == "https://github.com") {
         return "https://github.com/DanTheEpicMan/"; //not trying to self plug or anything, just dont like github default homepage
     }
+    return string;
 }
