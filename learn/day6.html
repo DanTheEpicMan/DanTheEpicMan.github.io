@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.split {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f8f8;
+  overflow-y: auto;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+
+
+h2 {
+  font-family: Arial, sans-serif;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the GIF scales proportionally */
+}
+
+.code-box11 {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 0; /* Removes rounded corners */
+  padding: 3px 5px; /* Reduces vertical padding for a tighter fit */
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap; /* Ensures line breaks are preserved */
+  overflow-x: auto; /* Adds horizontal scrolling for long lines */
+  max-width: 80%; /* Limits the width of the box */
+  margin: 0 auto; /* Centers the box horizontally */
+}
+
+.code-box {
+  background-color: #f4f4f4;
+  white-space: pre-wrap;
+  font-family: monospace;
+
+}
+
+</style>
+    <title>Intro To Programming</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+
+<ul>
+    <li> <img style="color:aliceblue; height:50px;" src="https://static.wixstatic.com/media/11b0b2_db6c14c9c26f4a3f89f5a6125e77dd09~mv2.png/v1/fill/w_176,h_176,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11b0b2_db6c14c9c26f4a3f89f5a6125e77dd09~mv2.png" alt="Team 3637"> </li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="day1.html">Day 1</a></li>
+    <li><a href="day2.html">Day 2</a></li>
+    <li><a href="day3.html">Day 3</a></li>
+    <li><a href="day4.html">Day 4</a></li>
+    <li><a href="day5.html">Day 5</a></li>
+    <li><a href="day6.html">Day 6</a></li>
+    <li><a href="day7.html">Day 7</a></li>
+    <li><a href="day8.html">Day 8</a></li>
+</ul>
+
+<div class="overlay" id="gifOverlay">
+  <img id="explosionGif" src="" alt="">
+</div>
+
+<script>
+// JavaScript to handle the key press and show the overlay
+document.addEventListener('keydown', function(event) {
+  if (event.key === '\\') {
+    const overlay = document.getElementById('gifOverlay');
+    const gif = document.getElementById('explosionGif');
+
+    var path = "pics/explosion/frame_";
+    var pathend = "_delay-0.01s.gif"
+
+    for (let i = 0; i <= 16; i++) {
+      setTimeout(() => {
+      const frameNumber = i < 10 ? '0' + i : i;
+      gif.src = path + frameNumber + pathend;
+      }, i * 70);
+    }
+
+    // Show the overlay
+    overlay.style.display = 'flex';
+
+    // Hide the overlay after the GIF finishes playing (e.g., 3 seconds)
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      gif.src = ''; // Reset the src to stop the GIF
+    }, 1200); // Adjust the duration to match the GIF length
+  }
+});
+</script>
+
+<div class="split">
+    <div class="left">
+        <h1>Day 6 - Practice</h1>
+        <p>Compleate the following practice</p>
+
+        <div data-pym-src='https://www.jdoodle.com/embed/v1/b37f2f466e0a82e5'></div>
+        <script src='https://www.jdoodle.com/assets/jdoodle-pym.min.js' type='text/javascript'></script>
+
+        <hr>
+
+        <div data-pym-src='https://www.jdoodle.com/embed/v1/a9c1e87a89b903c1'></div>
+        <script src='https://www.jdoodle.com/assets/jdoodle-pym.min.js' type='text/javascript'></script>
+        
+        <p>End of Day 6</p>
+    </div>
+    <div class="right">
+        <h2>Cheatsheet Day 6</h2>
+        <pre style="color:black;">
+        Class Structure:
+
+        class ClassName {
+          private:
+             //variables here. ie.
+             int x;
+
+          public:
+            // constructor here. has the same name as the class, no return type
+
+            ClassName(int var) {
+              // set value of variable here, typucaly by using the passed in variable (peramiter)
+            }
+
+            ClassName() {
+              //Shares the same name as the class but has no peramiter
+              // this is a default constructor, in here your Instance variables (x), will be set to a default value
+            }
+
+            returnType functionName(peramiterType peramiterName) {
+              // function code here
+              return value; //must match the returnType
+            }
+
+            //Example
+            int increaseAndReturn(int var) {
+              x = x + var;
+              return x;
+            }
+        }
+
+        Vocab:
+        <code>Instance Variable</code>: A variable that is declared (made) inside a class (not a function but the class itself)
+        <code>Declared</code>: Made (example: int x = 0; is a declaration of a variable called x)
+        <code>Constructor</code>: Called once when the class is creared
+        <code>Overload</code>: A function or constructor that has the same name as another function or constructor but has different peramiters
+        <code>Peramiter</code>: A variable that is passed into a function (example: int var in the function increaseAndReturn(int var))
+        <code>Return Type</code>: The type of value that a function returns (example: int in the function increaseAndReturn(int var))
+        <code>Function</code>: A block of code that can be called (example: int increaseAndReturn(int var) is a function)
+        <code>Function Call</code>: When a function is called (example: increaseAndReturn(5) is a function call)
+        <code>Define</code>: In the context of code, it means to write the code, opposite of Function Call
+        
+        
+
+        </pre>
+    </div>
+</div>
+
+</body>
+</html>
