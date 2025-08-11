@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extraction Challenge</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        h1 {
+            color: #000;
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+        }
+        code {
+            display: block;
+            background-color: #e0e0e0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            word-wrap: break-word;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+        }
+        details {
+            margin-top: 15px;
+            border: 1px dashed #aaa;
+            padding: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Challenge: The Onion</h1>
+    <p>
+        This String is enoded in multiple layers. Try and find them to get the original flag.
+    </p>
+    <p>Unwrap the layers to find the flag.</p>
+    
+    <h3>Data String:</h3>
+    <code>Uk5HR01He3hsaV9zcm1zcl9sZXdfcGVjaXZ3fQ==</code>
+
+    <hr>
+
+    <h3>Submit Flag:</h3>
+    <input type="text" id="flag-input" placeholder="flag{...}">
+    <button onclick="checkFlag()">Submit</button>
+    <div id="result" style="margin-top: 10px; font-weight: bold;"></div>
+
+    <hr>
+    
+    <div id="hints">
+        <h2>Hints</h2>
+        <details>
+            <summary>Hint #1</summary>
+            <p>Loot at the characters in the key. It only uses upper and lower case letters and numbers. It also sends in a "=". Look up: text encoding that uses 64 characters.</p>
+        </details>
+        <details>
+            <summary>Hint #2</summary>
+            <p>The second type of encripts dates back before computers to the time of Rome.</p>
+        </details>
+        <details>
+            <summary>Hint #3</summary>
+            <p>The first encoding type is called base64 and the second type is ceaser cypher (witch can be shifted by any amount)</p>
+        </details>
+    </div>
+</div>
+
+<script>
+    function checkFlag() {
+        //flag -> ceasar cipher shift 4 -> RNGGMG{xli_srmsr_lew_pecivw}
+        //... -> base64 ecnode -> Uk5HR01He3hsaV9zcm1zcl9sZXdfcGVjaXZ3fQ==
+        const correctFlag = 'NJCCIC{the_onion_has_layers}';
+
+        const flagInput = document.getElementById('flag-input').value.trim();
+        const resultDiv = document.getElementById('result');
+
+        if (flagInput.toLowerCase() === correctFlag) {
+            resultDiv.innerHTML = 'Correct! ';
+            resultDiv.style.color = 'green';
+        } else {
+            resultDiv.innerHTML = 'Incorrect. Try again.';
+            resultDiv.style.color = 'red';
+        }
+    }
+</script>
+
+</body>
+</html>
