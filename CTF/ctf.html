@@ -93,7 +93,9 @@
         const flagInput = document.getElementById('flag-input').value.trim();
         const resultDiv = document.getElementById('result');
 
-        if (flagInput.toLowerCase() === correctFlag) {
+        console.log('User input:', flagInput);
+
+        if (flagInput === correctFlag) {
             resultDiv.innerHTML = 'Correct! ';
             resultDiv.style.color = 'green';
         } else {
