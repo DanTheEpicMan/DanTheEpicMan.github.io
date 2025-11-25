@@ -1,208 +1,309 @@
-<!doctype html>
-
-<script>
-
-
-function resize() {
-  //gets coordinates of bottom right coorner of BookDiv
-  var BookDiv = document.getElementById('BookDiv');
-
-  //sets positon of BookButton to bottom right of BookDiv
-  var BookButton = document.getElementById('BookButton');
-  BookButton.style.position = 'absolute';
-  BookButton.style.bottom = '10px';
-  BookButton.style.right = '10px';
-
-  //gets coordinates of bottom right coorner of BookDiv
-  var BookDiv = document.getElementById('WedDiv');
-
-  //sets positon of BookButton to bottom right of BookDiv
-  var BookButton = document.getElementById('WebButton');
-  BookButton.style.position = 'absolute';
-  BookButton.style.bottom = '11px';
-  BookButton.style.right = '10px';
-
-  //gets coordinates of bottom right coorner of BookDiv
-  var BookDiv = document.getElementById('WikiDiv');
-
-  //sets positon of BookButton to bottom right of BookDiv
-  var BookButton = document.getElementById('WikiButton');
-  BookButton.style.position = 'absolute';
-  BookButton.style.bottom = '10px';
-  BookButton.style.right = '10px';
-
-  var cards = document.querySelectorAll('.card');
-  var height = (1500 - document.getElementById('cardContainer').offsetWidth)/2.5;
-  if (height < 180) {
-    height = 180;
-  }
-
-  if(height > 350) {
-    if (height > 350) {
-      var introText = document.getElementById('intro-text');
-      introText.style.maxWidth = '40vh';
-    }
-  }
-
-  if (height > 350) { //for when it goes into mobile view
-    height = height / 2.5;
-  }
-
-  var firstCardHeight = height;
-
-  console.log("Chosen:", height)
-  console.log("(1500 - width)/2.5: ", (1500 - document.getElementById('cardContainer').offsetWidth)/2.5)
-  console.log("Widtho: ", document.getElementById('cardContainer').offsetWidth)
-
-
-  for (var i = 0; i < cards.length; i++) {
-      cards[i].style.height = firstCardHeight + 'px';
-  }
-}
-
-window.onload = function() {
-    resize();
-}
-
-window.addEventListener('resize', function() {
-  resize();
-});
-
-</script>
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Daniel Denisov</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="mainpage.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1d715d876b.js" crossorigin="anonymous"></script>  
-  </head>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Daniel Denisov - Software Developer specializing in C++, Python, Kernel Development, ML/AI, and Robotics">
+  <meta name="keywords" content="Software Developer, C++, Python, Machine Learning, Robotics, FRC, Kernel Development">
+  <meta name="author" content="Daniel Denisov">
+
+  <title>Daniel Denisov | Software Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="mainpage.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/1d715d876b.js" crossorigin="anonymous"></script>
+
+  <!-- Projects Data -->
+  <script src="projects.js" defer></script>
+</head>
+
 <body>
-  <header>
-    <div class="p-3">
-      <div class="container" id="navbar">
-          <a href="/index.html">Home</a>
-          <a href="/project.html">Project Timeline</a>
-          <a  data-bs-toggle="modal" data-bs-target="#myModal">Contact</a>
-          <div class="d-flex justify-content-end">
-            <a href="https://www.unknowncheats.me/forum/search.php?searchid=34950843"><img src="/img/uc-logo.png" alt="UC logo" width="20" height="20"></a>
-            <a href="https://www.youtube.com/@DanTheEpicMan-"><i class="fab fa-youtube"></i></a>
-            <a href="https://github.com/DanTheEpicMan"><i class="fab fa-github"></i></a>
-          </div>
-      </div> 
-    </div>
+  <!-- HEADER / NAVIGATION -->
+  <header id="header">
+    <nav>
+      <div class="nav-logo">DD</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-social">
+        <a href="https://www.youtube.com/@DanTheEpicMan-" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://github.com/DanTheEpicMan" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
   </header>
 
-  
-  <main>
-    <div class="p-2">
-      <div style="border-radius: 20px; overflow: hidden;">
-        <div class="gradient-bottom-right start-indigo middle-purple end-yellow">
-          <div class="container" id="cardContainer">
-            <div class="row">
-              <h1 class="ls-tight fw-bolder display-3 text-white mb-3" style="margin-top: calc(5vh + 50px);">Hey,</h1>
-              <h1 class="ls-tight fw-bolder display-3 text-white mb-3">I'm Daniel Denisov.</h1>
-            </div>
-            <div class="grid-container">
-              <div class="grid-item">
-                <p id="intro-text" class="lead text-white text-wrap" style="max-width: calc(50vh);">I'm a software developer who works with C, C++, Python in relation with AI Vision, WPIlib, and Windows Kernel Drivers.</p>
-              </div>
-              <div class="grid-item grid-item-wrap">
-                <a href="#projects" class="btn btn-md" style="width:180px; height:50px; border: none; border-radius: 30px; color: black; background-color: white; text-align: center; line-height: 35px; margin-right: 20px;">Explore Projects</a>
-                <a href="#projects" class="btn btn-md" style="width:180px; height:50px; border: none; border-radius: 30px; color: white; background-color: black; text-align: center; line-height: 35px;">GitHub Repos</a>
-              </div>
-          </div>
-        <div style="margin-bottom: 30px;"><pre> </pre></div>
-      </div>
-    
-      <div style="height: 10px; background-color: white;"></div>
-
-      <div style="background-color: white;">
-        <div style="background-color: #0f172a; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
-          <div class="container">
-            <div><pre> </pre></div>
-            <div class="header">
-              <h5 class="h6 mb-1 text-uppercase fw-bolder display-10" style="color: rgb(129, 81, 242); margin-top: 50px;">Activitys</h5>
-              <h1 class="fw-bolder display-6 text-white mb-1">Look at what I am working on:</h1>            
-            </div>
-            
-            <div class="container" style="margin-top: 50px;">
-              <div class="row g-6 g-lg-20 my-10">
-                <div id="BookDiv" class="col-md-4 p-2">
-                    <div class="card p-2 d-flex dlex-column" >
-                      <div class="card-body">
-                        <h4 class="card-title">Reading <em>Practical Reverse Engineering</em></h4>
-                        <p class="card-text">By Bruce Dang, Alexandra Gazet and Elias Bachaalany</p>
-                        <div id="BookButton"> <a href="https://github.com/DanTheEpicMan/obsidianNotes/tree/main/assembly/assembly" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View My Notes</a>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div id="WebDiv" class="col-md-4 p-2">
-                    <div class="card p-2">
-                      <div class="card-body">
-                        <h4 class="card-title">This Website</h4>
-                        <p class="card-text">I developed this website using basic HTML/CSS in combination with Bootstrap.</p>
-                        <div id="WebButton"> <a href="https://github.com/DanTheEpicMan/DanTheEpicMan.github.io" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">View Repo</a>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div id="WikiDiv" class="col-md-4 p-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">NixOS</h4>
-                        <p class="card-text">My NixOS configuration</p>
-                        <div id="WikiButton"> <a href="https://github.com/DanTheEpicMan/nix-config" class="btn btn-md" style="background-color: white; color: #8151f2; padding: 10px 20px; border: 1px solid black; border-radius: 5px;">Goto Page</a>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            </div>
-
-            <div style="margin-bottom: 50px;"><pre> </pre></div>
-        </div>
-      </div> <!--end of white background-->
-
-    </div>
-    </div>
-    
-    </div>
-
-  </main>
-
-  <div class="modal" id="myModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="background-color: #0f172a;">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title text-white display-6">Contact Information</h4>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          <p class="text-white" style="margin-bottom: 3px;">Need to Contact Me?</p>
-          <p style="background: linear-gradient(to left, rgb(138, 74, 184), rgb(187, 64, 136), rgb(230, 152, 116)); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">website.contact@danieldenisov.com</p>
-        </div>
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-subtitle">Hey, I'm</p>
+      <h1 class="hero-title">
+        Daniel <span class="gradient-text">Denisov</span>
+      </h1>
+      <p class="hero-description">
+        High School student passionate about <strong>System Architecture</strong>, <strong>Linux</strong>, and
+        <strong>Backend Development</strong>.
+        Experienced in C++, Python, Kernel Development, ML/AI, and Robotics.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-tag">About Me</span>
+      <h2 class="section-title">Who I Am</h2>
+      <p class="section-description">
+        I'm currently in high school, planning to pursue Computer Science in college.
+        My passion lies in low-level programming, system architecture, and building robust backend systems.
+        I've gained hands-on experience through internships, competitive robotics, and personal projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-tag">Experience</span>
+      <h2 class="section-title">My Journey</h2>
+    </div>
+
+    <div class="timeline">
+      <!-- FRC Robotics -->
+      <div class="timeline-item glass-card">
+        <p class="timeline-date">2022 - Present</p>
+        <h3 class="timeline-title">Director of Software</h3>
+        <p class="timeline-company">Team 3637: The Daleks - FIRST Robotics Competition</p>
+        <p class="timeline-description">
+          Lead developer and team project manager for competitive robotics team.
+          Architect codebase, train new members, and oversee all technical aspects of robot development.
+        </p>
+        <ul class="timeline-achievements">
+          <li>Participated in 2024 World Championship</li>
+          <li>Won Excellence in Engineering Award (2025)</li>
+          <li>Won Engineering Inspiration Award (2025)</li>
+          <li>1st Place at Regional Event + Impact Award (2024)</li>
+          <li>Developed autonomous navigation and vision systems using WPILib</li>
+        </ul>
+      </div>
+
+      <!-- Stevens Institute Internship -->
+      <div class="timeline-item glass-card">
+        <p class="timeline-date">Summer 2024</p>
+        <h3 class="timeline-title">IT Intern - AI Compute Access</h3>
+        <p class="timeline-company">Stevens Institute of Technology - Division of IT</p>
+        <p class="timeline-description">
+          Researched and helped implement frameworks for students to access Stevens' AI compute cluster
+          through Jupyter Notebooks for ML/AI training and coursework.
+        </p>
+        <ul class="timeline-achievements">
+          <li>Researched best frameworks for classroom AI integration</li>
+          <li>Developed deployment strategies for Jupyter Notebook infrastructure</li>
+          <li>Enabled scalable access to GPU compute resources for students</li>
+        </ul>
+      </div>
+
+      <!-- NJCCIC Internship -->
+      <div class="timeline-item glass-card">
+        <p class="timeline-date">Summer 2023</p>
+        <h3 class="timeline-title">Advanced Cybersecurity Internship</h3>
+        <p class="timeline-company">New Jersey Cybersecurity & Communications Integration Cell</p>
+        <p class="timeline-description">
+          Worked in a team developing educational cybersecurity materials for middle and high schools,
+          including escape rooms, CTFs, and hands-on exercises.
+        </p>
+        <ul class="timeline-achievements">
+          <li>Created cyber-themed escape room and unplugged exercises</li>
+          <li>Developed Capture The Flag (CTF) challenges for students</li>
+          <li>Researched AI threat detection for hospital cybersecurity</li>
+          <li>Focused on protecting patient data and mitigating operational impacts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-tag">Skills</span>
+      <h2 class="section-title">Technical Expertise</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">💻</div>
+        <h3 class="skill-name">C / C++</h3>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🐍</div>
+        <h3 class="skill-name">Python</h3>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">⚙️</div>
+        <h3 class="skill-name">Kernel Development</h3>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <h3 class="skill-name">ML / AI</h3>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🔧</div>
+        <h3 class="skill-name">WPILib</h3>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🪟</div>
+        <h3 class="skill-name">Windows Kernel Drivers</h3>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🐧</div>
+        <h3 class="skill-name">Linux</h3>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🏗️</div>
+        <h3 class="skill-name">System Architecture</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-tag">Projects</span>
+      <h2 class="section-title">Featured Work</h2>
+    </div>
+
+    <!-- Projects will be dynamically loaded from projects.js -->
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-tag">Contact</span>
+      <h2 class="section-title">Get In Touch</h2>
+    </div>
+
+    <div class="contact-content">
+      <p class="section-description">
+        I'm always open to discussing new opportunities, collaborations, or just chatting about technology.
+        Feel free to reach out!
+      </p>
+
+      <a href="mailto:website.contact@danieldenisov.com" class="contact-email">
+        website.contact@danieldenisov.com
+      </a>
+
+      <div class="contact-social">
+        <a href="https://www.youtube.com/@DanTheEpicMan-" target="_blank" class="social-link" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://github.com/DanTheEpicMan" target="_blank" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 Daniel Denisov. Built with passion and code.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          if (window.innerWidth <= 768) {
+            navLinks.style.display = 'none';
+          }
+        }
+      });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards (except project cards which are handled by projects.js)
+    document.querySelectorAll('.glass-card, .skill-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
 </body>
+
 </html>
-
-
-<!-- https://www.w3schools.com/bootstrap5/index.php -->
-<!-- http://localhost:5500/ -->
