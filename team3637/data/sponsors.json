@@ -1,0 +1,160 @@
+{
+    "sponsors": {
+        "diamond": [
+            {
+                "name": "Hunterdon Central",
+                "logo": null
+            },
+            {
+                "name": "Nokia Bell Labs",
+                "logo": null
+            },
+            {
+                "name": "Johnson & Johnson",
+                "logo": null
+            }
+        ],
+        "gold": [
+            {
+                "name": "Aceolution Inc.",
+                "logo": null
+            },
+            {
+                "name": "New Era Hemonc",
+                "logo": null
+            },
+            {
+                "name": "Molex",
+                "logo": null
+            }
+        ],
+        "silver": [
+            {
+                "name": "Straz Computer Consulting Inc.",
+                "logo": null
+            },
+            {
+                "name": "Shake A Paw",
+                "logo": null
+            },
+            {
+                "name": "North Star Tutors",
+                "logo": null
+            },
+            {
+                "name": "Mathnasium",
+                "logo": null
+            },
+            {
+                "name": "Hunterdon Healthcare",
+                "logo": null
+            },
+            {
+                "name": "Magna Power",
+                "logo": null
+            },
+            {
+                "name": "Local Wisdom Inc.",
+                "logo": null
+            },
+            {
+                "name": "Terrace DJ",
+                "logo": null
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Showoff Production",
+                "logo": null
+            },
+            {
+                "name": "Quick Point",
+                "logo": null
+            },
+            {
+                "name": "Poke Cafe, LLC",
+                "logo": null
+            },
+            {
+                "name": "Susan M Pincofski",
+                "logo": null
+            },
+            {
+                "name": "State Farm Insurance Companies",
+                "logo": null
+            },
+            {
+                "name": "Solve Technologies",
+                "logo": null
+            },
+            {
+                "name": "Panera, LLC",
+                "logo": null
+            },
+            {
+                "name": "Padovani Construction",
+                "logo": null
+            },
+            {
+                "name": "Kumon of Lebanon",
+                "logo": null
+            },
+            {
+                "name": "Kickquest Martial Arts",
+                "logo": null
+            },
+            {
+                "name": "Joe's Pizzeria",
+                "logo": null
+            },
+            {
+                "name": "Hay Mental Health",
+                "logo": null
+            },
+            {
+                "name": "Discover Math",
+                "logo": null
+            },
+            {
+                "name": "Cilantro Garden",
+                "logo": null
+            },
+            {
+                "name": "Bensi of Whitehouse Station LLC",
+                "logo": null
+            }
+        ],
+        "centuryFriend": [
+            "Vijay Kommareddy",
+            "Suseema Fernando",
+            "Shankara Family",
+            "Loubna Mdidat",
+            "Lawrence",
+            "Kris Vining",
+            "Jay Vutkuri",
+            "Balakrishna Patur",
+            "ASDC CrossFit"
+        ],
+        "centuryPlusFriend": [
+            "Nelson Family",
+            "Irna Denisov",
+            "Veronica Cioni",
+            "Kathiari Family",
+            "Edwards Family",
+            "Nunez Family"
+        ],
+        "loyalFriend": [
+            "Theodore Family",
+            "Stanley Bielen",
+            "Rupesh Patel",
+            "Richard Slaughter",
+            "Pratish Patel",
+            "Pooja Mishra",
+            "Srivastava Family",
+            "Lisa Wance",
+            "Lisa Saunders Baugh",
+            "Krishiv Patel",
+            "Darshini Patel"
+        ]
+    }
+}

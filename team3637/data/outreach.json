@@ -1,0 +1,63 @@
+{
+    "outreach": [
+        {
+            "id": "stem-curriculum",
+            "title": "STEM Curriculum",
+            "description": "This innovative curriculum is designed to empower students with limited resources by utilizing step-by-step instructional videos available in both Portuguese and English that members of our team created. The curriculum covers essential online tools, including document creation, presentations, emails, and coding basics. By bridging language barriers and providing accessible resources, our team aims to democratize STEM education and empower students in Brazil to navigate the digital landscape. Thereby fulfilling our mission of fostering STEM locally, and making a difference globally.",
+            "image": "oureach-STEM-Curriculum.avif",
+            "category": "education"
+        },
+        {
+            "id": "fll-teams",
+            "title": "FLL & FLL Jr. Teams Mentored in Our Community",
+            "description": "The 5 FLL teams meet weekly at Flemington Presbyterian Church which offers their youth space through one of our team administrators. While our 4 adult coaches provide administrative oversight, our student mentors facilitate these meetings by providing instruction on programming, research, and presentation techniques. Daleks model leadership and adherence to Core Values as the FLL members grow into their roles on the team. This develops our FIRST pipeline, where middle school students are eager to continue their participation in FIRST by joining our FRC team or FTC programs in the area.",
+            "image": "outreach-FLL.avif",
+            "category": "mentorship"
+        },
+        {
+            "id": "grow-a-row",
+            "title": "Grow-a-Row",
+            "description": "Our team organized a meaningful outreach event named \"Grow-Row,\" where we actively participated in harvesting cabbage to provide essential food resources for the underprivileged. Through collective effort, we successfully picked 500,000 cabbages. This initiative not only demonstrated our commitment to community service but also made a significant impact in addressing food insecurity by contributing to those in need. Our team takes pride in leveraging our skills and resources to make a positive difference and support the well-being of the underprivileged in our community.",
+            "image": "oureach-grow-a-row.avif",
+            "category": "community",
+            "stats": "500,000 cabbages harvested"
+        },
+        {
+            "id": "library-makerspace",
+            "title": "Hunterdon County Library Makerspace",
+            "description": "We also forged a valuable partnership with the Hunterdon County Library Maker Space, playing a pivotal role in setting up their new VEX Robot kits and subsequently conducting three enriching sessions of VEX Robotics. Particularly noteworthy was our engagement with homeschooled children aged 7-12, where our members served as mentors, guiding these eager learners through the intricacies of building and programming robots. This initiative proved instrumental in exposing 20 students to the captivating world of STEM, fostering their curiosity and igniting a passion for exploration and innovation.",
+            "image": "outreach-library.avif",
+            "category": "education",
+            "stats": "20 students reached"
+        },
+        {
+            "id": "gingerbreadgineering",
+            "title": "Gingerbreadgineering",
+            "description": "Our team organized a festive and educational outreach event called \"Gingerbreadgineering\" at the Flemington Presbyterian Church, infusing the holiday spirit with engaging Christmas-themed STEM activities. Participants had the opportunity to delve into hands-on projects, including crafting gingerbread houses, participating in a candy slingshot challenge, and constructing marshmallow igloos. Through this innovative event, we not only spread the joy of the season but also successfully promoted STEM education creatively and interactively, fostering a sense of excitement and curiosity within our local community.",
+            "image": "outrech-gingerbreadgineering.avif",
+            "category": "education"
+        },
+        {
+            "id": "school-stem-clubs",
+            "title": "School STEM Clubs",
+            "description": "Nine years ago, we established a relationship with a local elementary school; Barley Sheaf Elementary School, to mentor their after-school STEM clubs. This initiative was so successful that we expanded to even more local elementary schools. These partnerships have allowed us to nurture an excitement for STEM in hundreds of young children. Our increased focus on outreach and service inspired our student leaders to establish a service expectation for all members. The team has developed a diverse outreach program including STEM mentorship, demonstrations, and participation in other charitable programs.",
+            "image": "mech-building-robot.avif",
+            "category": "mentorship",
+            "stats": "Hundreds of students impacted"
+        },
+        {
+            "id": "stem-for-seniors",
+            "title": "Independence Manor (STEM with Seniors)",
+            "description": "Last year, we organized a collaborated event with a nearby assisted living facility for seniors, Independence Manor. Since COVID, many seniors in Independence Manor have been confined to their rooms, leading to isolation and a lack of exposure to the outside world. To increase their exposure to the outside world, we started a building club with the seniors that would not only bring entertainment to the seniors but also help them stay active. Additionally our team has established our STEM For Seniors initiative. Our outreach collaboration included the creation of modern technology such as drones and VEX robots. To expand on this initiative, this year our team created a STEM For Seniors Initiative – aimed at bridging the generational gap in technology education. Through this initiative we partnered with United Way teaching hands-on workshops breaking down complex concepts into simple, accessible lessons such as drone building. Through hands-on engagement with these projects, residents have had the opportunity to solve and socially interact with others.",
+            "image": "outreach-stem-for-siniors.avif",
+            "category": "community"
+        },
+        {
+            "id": "other-events",
+            "title": "Other Events and Drives",
+            "description": "Our team actively engages with the community through a series of impactful robot demonstrations at various events, including the 4-H fair, a prominent local fair, back-to-school night, and Makers Day. These outreach events serve as dynamic platforms to promote our team, showcasing our technological innovations and fostering enthusiasm for STEM fields. By participating in these diverse community events, we not only demonstrate our robot's capabilities but also actively contribute to the promotion and awareness of our team, reinforcing our commitment to STEM education and community engagement.",
+            "image": "outreach-other.avif",
+            "category": "community"
+        }
+    ]
+}

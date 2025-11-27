@@ -1,0 +1,22 @@
+{
+    "posts": [
+        {
+            "id": "grow-a-row-2024",
+            "title": "Grow-a-Row: Making a Difference One Vegetable at a Time",
+            "author": "Sarah Bansal",
+            "date": "November 10, 2024",
+            "readTime": "1 min read",
+            "content": "On November 7th, The Daleks picked beets at a local Grow-a-Row farm. Grow-a-Row is a national organization based in Hunterdon County that grows and donates fresh produce across America, aiding families affected by food insecurity. Alongside growing, they also apply sustainable farming techniques, reduce food waste, and educate the community on the importance of healthy habits. Grow-a-row sprouted in 2002 when founder Chip Paillex and his daughter first donated their produce surplus to the Flemington Food Pantry. After seeing the huge impact made by this small gesture, they decided to go bigger. Now, Grow-a-Row farms span across 423 acres, producing millions of servings every year. On that Friday specifically, the Daleks contributed to over 10,500 pounds of donated produce, equaling to 40,000 servings. But as Chip Paillex said \"It's not about the pounds - It always has and always will be about the people.\" The Daleks are grateful for the opportunities that Grow-a-Row has provided for the past 3 years, and are looking forward to continue making a difference, one vegetable at a time.",
+            "images": [
+                "blog-grow-a-row-1.avif",
+                "blog-grow-a-row-2.avif",
+                "blog-grow-a-row-3.avif"
+            ],
+            "stats": {
+                "produce": "10,500 pounds",
+                "servings": "40,000",
+                "acres": "423"
+            }
+        }
+    ]
+}
