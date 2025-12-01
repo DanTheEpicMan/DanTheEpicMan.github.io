@@ -17,7 +17,7 @@ export class Hero {
           <div class="hero-team-number">3637</div>
           <h1 class="hero-title">The Daleks</h1>
           <p class="hero-subtitle">Hunterdon Central Regional High School</p>
-          <p class="hero-subtitle">Hunterdon, NJ</p>
+          <p class="hero-subtitle">Flemington</p>
           <p class="hero-tagline">"Foster STEM Locally, Make a Difference Globally"</p>
           
           <div class="hero-cta">
