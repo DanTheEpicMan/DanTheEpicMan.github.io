@@ -25,16 +25,16 @@
       "description": "Makes robot active through programming in C++."
     },
     {
-      "id": "business",
-      "name": "Business and Outreach",
-      "icon": "📊",
-      "description": "Markets and advertises the team. Manages sponsorships and team finances."
-    },
-    {
       "id": "electrical",
       "name": "Electrical",
       "icon": "⚡",
       "description": "Focuses on wiring the robot and organizing components."
+    },
+    {
+      "id": "business",
+      "name": "Business and Outreach",
+      "icon": "📊",
+      "description": "Markets and advertises the team. Manages sponsorships and team finances."
     }
   ]
 }
