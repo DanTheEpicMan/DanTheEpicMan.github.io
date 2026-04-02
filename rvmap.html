@@ -472,7 +472,7 @@ document.getElementById('btnClearAll').addEventListener('click', () => { if(!poi
   i.onerror = () => {
     loadingOverlay.innerHTML = '<div style="text-align:center;color:var(--danger);padding:24px;line-height:1.6">Could not load <strong style="color:var(--text)">map.png</strong><br><span style="font-size:12px;color:var(--text-dim)">Place map.png in the same folder as this HTML file.</span></div>';
   };
-  i.src = 'map.png';
+  i.src = 'img/map.png';
 })();
 
 window.addEventListener('resize', () => { if (img) render(); });
