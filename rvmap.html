@@ -456,8 +456,17 @@ document.getElementById('btnZoomOut').addEventListener('click', () => { if(img) 
 
 function fitImage() {
   if (!img) return;
-  const w = wrap.clientWidth, h = wrap.clientHeight, s = Math.min(w/imgW, h/imgH)*0.95;
-  view.scale = s; view.x = (w-imgW*s)/2; view.y = (h-imgH*s)/2; render();
+  const panel = document.getElementById('segmentPanel');
+  const panelW = panel ? panel.offsetWidth + 16 : 0;   // panel + gap
+  const keyPanel = document.querySelector('.key-panel');
+  const keyW = keyPanel ? keyPanel.offsetWidth + 16 : 0;
+  const usableW = wrap.clientWidth - panelW - keyW;
+  const usableH = wrap.clientHeight - 16;
+  const s = Math.min(usableW / imgW, usableH / imgH) * 0.95;
+  view.scale = s;
+  view.x = keyW + (usableW - imgW * s) / 2;
+  view.y = (wrap.clientHeight - imgH * s) / 2;
+  render();
 }
 
 document.getElementById('btnFit').addEventListener('click', fitImage);
